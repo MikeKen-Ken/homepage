@@ -243,14 +243,14 @@ const Home = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://oss.mikeken.online/shader/web-desktop/index.html"
-            title="2D shader"
+            title="2D shader(电脑打开)"
             thumbnail={thumb2dshader}
           >
             常见的一些 2D shader
           </GridItem>
           <GridItem
             href="https://oss.mikeken.online/blinn-phong/web-desktop/index.html"
-            title="3D shader"
+            title="3D shader(电脑打开)"
             thumbnail={thumb3dshader}
           >
             法线着色, blinn-phong模型, 纹理映射
