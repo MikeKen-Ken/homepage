@@ -1,25 +1,25 @@
-import NextLink from 'next/link'
+// import NextLink from 'next/link'
 import {
-  Link,
+  // Link,
   Container,
   Heading,
   Box,
   SimpleGrid,
-  Button,
-  List,
-  ListItem,
+  // Button,
+  // List,
+  // ListItem,
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
+// import { ChevronRightIcon } from '@chakra-ui/icons'
+// import Paragraph from '../components/paragraph'
+// import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+// import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import thumbBrainWash from '../public/images/games/brainwash.png'
+import thumbCrashload from '../public/images/games/crashload.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -37,15 +37,15 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        嗨, 欢迎. 这是我的一些个人作品展示
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            陈 肯
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>3D 前端工程师</p>
         </Box>
         <Box
           flexShrink={0}
@@ -74,26 +74,12 @@ const Home = () => (
         </Box>
       </Box>
 
-      <Section delay={0.1}>
+      {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" passHref scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
-          <NextLink href="https://www.youtube.com/devaslife" passHref>
-            <Link target="_blank">Dev as Life</Link>
-          </NextLink>
-          &quot; has more than 100k subscribers.
+
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
@@ -102,9 +88,9 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
-      </Section>
+      </Section> */}
 
-      <Section delay={0.2}>
+      {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -126,9 +112,9 @@ const Home = () => (
           <BioYear>2012 to present</BioYear>
           Working as a freelancer
         </BioSection>
-      </Section>
+      </Section> */}
 
-      <Section delay={0.3}>
+      {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
@@ -143,13 +129,13 @@ const Home = () => (
           </Link>
           , Leica, Machine Learning
         </Paragraph>
-      </Section>
+      </Section> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          2D 游戏
         </Heading>
-        <List>
+        {/* <List>
           <ListItem>
             <Link href="https://github.com/craftzdog" target="_blank">
               <Button
@@ -194,32 +180,54 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
-        </List>
+        </List> */}
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
+            href="https://oss.mikeken.online/brainwash/web-mobile/index.html"
+            title="脑洞太大了吧"
+            thumbnail={thumbBrainWash}
           >
-            My YouTube channel (&gt;100k subs)
+            2D 益智解谜类
           </GridItem>
           <GridItem
             href="https://www.inkdrop.app/"
             title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            thumbnail={thumbCrashload}
           >
             A Markdown note-taking app
           </GridItem>
         </SimpleGrid>
 
-        <Box align="center" my={4}>
+        {/* <Box align="center" my={4}>
           <NextLink href="/posts" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          3D 游戏
+        </Heading>
+        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            href="https://oss.mikeken.online/crash_load/web-mobile/index.html"
+            title="紧急迫降"
+            thumbnail={thumbCrashload}
+          >
+            2D 益智解谜类
+          </GridItem>
+          <GridItem
+            href="https://www.inkdrop.app/"
+            title="Inkdrop"
+            thumbnail={thumbCrashload}
+          >
+            A Markdown note-taking app
+          </GridItem>
+        </SimpleGrid>
       </Section>
     </Container>
   </Layout>
