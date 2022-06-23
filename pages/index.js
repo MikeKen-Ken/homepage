@@ -19,7 +19,12 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 // import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbBrainWash from '../public/images/games/brainwash.png'
-import thumbCrashload from '../public/images/games/crashload.png'
+import thumbCrashLoad from '../public/images/games/crashload.png'
+import thumbDipPuzzle from '../public/images/games/dippuzzle.png'
+import thumbStar from '../public/images/games/star.png'
+import thumbQuadTree from '../public/images/games/quadtree.png'
+import thumb3dshader from '../public/images/games/3dshader.png'
+import thumb2dshader from '../public/images/games/2dshader.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -188,15 +193,16 @@ const Home = () => (
             title="脑洞太大了吧"
             thumbnail={thumbBrainWash}
           >
-            2D 益智解谜类
+            益智解谜类
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbCrashload}
+            href="https://oss.mikeken.online/popstar/web-mobile/index.html"
+            title="天天玩消星星"
+            thumbnail={thumbStar}
           >
-            A Markdown note-taking app
+            消除类
           </GridItem>
+
         </SimpleGrid>
 
         {/* <Box align="center" my={4}>
@@ -214,18 +220,56 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://oss.mikeken.online/crash_load/web-mobile/index.html"
+            href="https://oss.mikeken.online/crashload/web-mobile/index.html"
             title="紧急迫降"
-            thumbnail={thumbCrashload}
+            thumbnail={thumbCrashLoad}
           >
-            2D 益智解谜类
+            飞行类
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbCrashload}
+            href="https://oss.mikeken.online/dippuzzle/web-mobile/index.html"
+            title="蘸色小能手"
+            thumbnail={thumbDipPuzzle}
           >
-            A Markdown note-taking app
+            休闲益智类
+          </GridItem>
+        </SimpleGrid>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          渲染
+        </Heading>
+        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            href="https://oss.mikeken.online/shader/web-desktop/index.html"
+            title="2D shader"
+            thumbnail={thumb2dshader}
+          >
+            常见的一些 2D shader
+          </GridItem>
+          <GridItem
+            href="https://oss.mikeken.online/blinn-phong/web-desktop/index.html"
+            title="3D shader"
+            thumbnail={thumb3dshader}
+          >
+            法线着色, blinn-phong模型, 纹理映射
+          </GridItem>
+
+        </SimpleGrid>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          其他
+        </Heading>
+        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            href="https://oss.mikeken.online/quadTree/web-mobile/index.html"
+            title="四叉树"
+            thumbnail={thumbQuadTree}
+          >
+            用于优化碰撞检测的一种数据结构
           </GridItem>
         </SimpleGrid>
       </Section>
