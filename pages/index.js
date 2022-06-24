@@ -25,6 +25,7 @@ import thumbStar from '../public/images/games/star.png'
 import thumbQuadTree from '../public/images/games/quadtree.png'
 import thumb3dshader from '../public/images/games/3dshader.png'
 import thumb2dshader from '../public/images/games/2dshader.png'
+import thumbConvexHull from '../public/images/games/convexhull.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -270,6 +271,13 @@ const Home = () => (
             thumbnail={thumbQuadTree}
           >
             用于优化碰撞检测的一种数据结构
+          </GridItem>
+          <GridItem
+            href="https://oss.mikeken.online/convexHull/web-mobile/index.html"
+            title="凸包"
+            thumbnail={thumbConvexHull}
+          >
+            用于获取一堆点组成的的凸多边形
           </GridItem>
         </SimpleGrid>
       </Section>
