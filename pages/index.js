@@ -282,10 +282,10 @@ const Home = () => (
           </GridItem>
           <GridItem
             href="https://oss.mikeken.online/Ramer-Douglas-Peucker/web-mobile/index.html"
-            title="Ramer-Douglas-Peucker 算法"
+            title="Ramer-Douglas-Peucker"
             thumbnail={thumbRamerDouglasPeucker}
           >
-            在一定的阈值范围内简化曲线上的点
+            在一定的阈值范围内简化曲线上的点的算法
           </GridItem>
         </SimpleGrid>
       </Section>
