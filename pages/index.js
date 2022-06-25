@@ -26,6 +26,7 @@ import thumbQuadTree from '../public/images/games/quadtree.png'
 import thumb3dshader from '../public/images/games/3dshader.png'
 import thumb2dshader from '../public/images/games/2dshader.png'
 import thumbConvexHull from '../public/images/games/convexhull.png'
+import thumbRamerDouglasPeucker from '../public/images/games/Ramer-Douglas-Peucker.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -278,6 +279,13 @@ const Home = () => (
             thumbnail={thumbConvexHull}
           >
             用于获取一堆点组成的的凸多边形
+          </GridItem>
+          <GridItem
+            href="https://oss.mikeken.online/Ramer-Douglas-Peucker/web-mobile/index.html"
+            title="Ramer-Douglas-Peucker 算法"
+            thumbnail={thumbRamerDouglasPeucker}
+          >
+            在一定的阈值范围内简化曲线上的点
           </GridItem>
         </SimpleGrid>
       </Section>
