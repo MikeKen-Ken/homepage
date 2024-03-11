@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\MikeKen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;D:\app\cmake\bin;D:\app\mingw64\bin;D:\app\opencv\opencv\opencv_mingw64_build\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\MikeKen\AppData\Local\Android\Sdk\platform-tools;C:\Users\MikeKen\AppData\Local\Android\Sdk\emulator;C:\Users\MikeKen\AppData\Local\Android\Sdk\tools;C:\Users\MikeKen\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\LLVM\bin;C:\dev\vcpkg;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;D:\app\git\Git\cmd;C:\Users\MikeKen\AppData\Local\pnpm;C:\Users\MikeKen\AppData\Local\pnpm;C:\Users\MikeKen\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\MikeKen\AppData\Local\Programs\Python\Python310\;C:\Users\MikeKen\AppData\Local\Microsoft\WindowsApps;D:\app\vscode\Microsoft VS Code\bin;C:\Users\MikeKen\.dotnet\tools;D:\workspace\flutter_windows_2.10.5-stable\flutter\bin;C:\Users\MikeKen\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  21.1.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: certificate has expired
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1674:34)
+      at TLSSocket.emit (node:events:515:28)
+      at TLSSocket._finishInit (node:_tls_wrap:1085:8)
+      at ssl.onhandshakedone (node:_tls_wrap:871:12)
+
+npm manifest: 
+  {
+    "name": "MikeKen-homepage",
+    "version": "1.0.0",
+    "description": "MikeKen's website",
+    "scripts": {
+      "dev": "next dev -H 0.0.0.0",
+      "build": "next build ",
+      "start": "next start",
+      "prettier": "prettier --write .",
+      "lint": "next lint"
+    },
+    "keywords": [],
+    "author": "MikeKen",
+    "license": "MIT",
+    "dependencies": {
+      "@chakra-ui/icons": "^1.1.7",
+      "@chakra-ui/react": "^1.8.8",
+      "@emotion/react": "^11.9.0",
+      "@emotion/styled": "^11.8.1",
+      "framer-motion": "^6.3.0",
+      "next": "^12.1.5",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-icons": "^4.3.1",
+      "three": "^0.139.2"
+    },
+    "devDependencies": {
+      "eslint": "^8.13.0",
+      "eslint-config-next": "^12.1.5",
+      "prettier": "^2.6.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

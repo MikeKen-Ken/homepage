@@ -16,7 +16,7 @@ import {
 // import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
+import { GridItem, NotesTitle, NotesAccordion } from '../components/grid-item'
 // import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbBrainWash from '../public/images/games/brainwash.png'
 import thumbCrashLoad from '../public/images/games/crashload.png'
@@ -191,14 +191,14 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://oss.mikeken.online/brainwash/web-mobile/index.html"
+            href="http://oss.mikeken.online/brainwash/web-mobile/index.html"
             title="脑洞太大了吧"
             thumbnail={thumbBrainWash}
           >
             益智解谜类
           </GridItem>
           <GridItem
-            href="https://oss.mikeken.online/popstar/web-mobile/index.html"
+            href="http://oss.mikeken.online/popstar/web-mobile/index.html"
             title="天天玩消星星"
             thumbnail={thumbStar}
           >
@@ -222,14 +222,14 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://oss.mikeken.online/crashload/web-mobile/index.html"
+            href="http://oss.mikeken.online/crashload/web-mobile/index.html"
             title="紧急迫降"
             thumbnail={thumbCrashLoad}
           >
             飞行类
           </GridItem>
           <GridItem
-            href="https://oss.mikeken.online/dippuzzle/web-mobile/index.html"
+            href="http://oss.mikeken.online/dippuzzle/web-mobile/index.html"
             title="蘸色小能手"
             thumbnail={thumbDipPuzzle}
           >
@@ -244,14 +244,14 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://oss.mikeken.online/shader/web-desktop/index.html"
+            href="http://oss.mikeken.online/shader/web-desktop/index.html"
             title="2D shader(电脑打开)"
             thumbnail={thumb2dshader}
           >
             常见的一些 2D shader
           </GridItem>
           <GridItem
-            href="https://oss.mikeken.online/blinn-phong/web-desktop/index.html"
+            href="http://oss.mikeken.online/blinn-phong/web-desktop/index.html"
             title="3D shader(电脑打开)"
             thumbnail={thumb3dshader}
           >
@@ -267,21 +267,21 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://oss.mikeken.online/quadTree/web-mobile/index.html"
+            href="http://oss.mikeken.online/quadTree/web-mobile/index.html"
             title="四叉树"
             thumbnail={thumbQuadTree}
           >
             用于优化碰撞检测的一种数据结构
           </GridItem>
           <GridItem
-            href="https://oss.mikeken.online/convexHull/web-mobile/index.html"
+            href="http://oss.mikeken.online/convexHull/web-mobile/index.html"
             title="凸包"
             thumbnail={thumbConvexHull}
           >
             用于获取一堆点组成的的凸多边形
           </GridItem>
           <GridItem
-            href="https://oss.mikeken.online/Ramer-Douglas-Peucker/web-mobile/index.html"
+            href="http://oss.mikeken.online/Ramer-Douglas-Peucker/web-mobile/index.html"
             title="Ramer-Douglas-Peucker"
             thumbnail={thumbRamerDouglasPeucker}
           >
@@ -289,9 +289,106 @@ const Home = () => (
           </GridItem>
         </SimpleGrid>
       </Section>
+
+
+
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          学习笔记
+        </Heading>
+        <NotesAccordion noteGroups={noteGroups}
+        ></NotesAccordion>
+        <SimpleGrid columns={[1]} gap={6}>
+
+
+
+        </SimpleGrid>
+      </Section>
     </Container>
-  </Layout>
+  </Layout >
 )
 
 export default Home
 export { getServerSideProps } from '../components/chakra'
+const noteGroups = [
+  {
+    id: 1,
+    title: '图形学中的数学',
+    notes: [
+      {
+        id: 1,
+        title: '图形学中的几何',
+        href: 'http://oss.mikeken.online/notes/数学/几何.html',
+        content: "几何是图形学的理论基础, 图形学是几何在计算机领域的实践应用",
+        date: '2022-06-1',
+        tags: ['数学', '几何', "平面", "三角"],
+      },
+      {
+        id: 2,
+        title: '数学基础之向量',
+        href: 'http://oss.mikeken.online/notes/数学/向量.html',
+        content: '向量是图形中最重要的数学基础',
+        date: '2022-05-18',
+        tags: ['数学', '向量'],
+      },
+      {
+        id: 3,
+        title: '四元数与旋转',
+        href: 'http://oss.mikeken.online/notes/数学/四元数.html',
+        content: '四元数是图形学中广泛应用的旋转方式',
+        date: '2022-04-20',
+        tags: ['数学', '四元数', '旋转'],
+      },
+      {
+        id: 4,
+        title: '常见坐标系',
+        href: 'http://oss.mikeken.online/notes/数学/坐标系.html',
+        date: '2022-04-15',
+        tags: ['数学', '坐标系'],
+      },
+      {
+        id: 5,
+        title: '复数与旋转',
+        href: 'http://oss.mikeken.online/notes/数学/复数和旋转.html',
+        date: '2022-04-2',
+        tags: ['数学', '旋转'],
+      }, {
+        id: 6,
+        title: '导数',
+        href: 'http://oss.mikeken.online/notes/数学/导数.html',
+        date: '2022-03-20',
+        tags: ['数学', '导数'],
+      }, {
+        id: 7,
+        title: '曲线和曲面',
+        href: 'http://oss.mikeken.online/notes/数学/曲线和曲面.html',
+        content: '曲线和曲面是构建逼真、平滑的动画基础',
+        date: '2022-03-11',
+        tags: ['数学', '曲线', '曲面'],
+      },
+      {
+        id: 8,
+        title: '概率论',
+        href: 'http://oss.mikeken.online/notes/数学/概率论.html',
+        date: '2022-03-01',
+        tags: ['数学', '概率论'],
+      },
+      {
+        id: 9,
+        title: '矩阵',
+        href: 'http://oss.mikeken.online/notes/数学/矩阵.html',
+        date: '2022-2-18',
+        content: '在图形学中, 矩阵用来表示和变换图形对象的位置、方向等属性',
+        tags: ['数学', '矩阵', '变换'],
+      }, {
+        id: 10,
+        title: '积分',
+        href: 'http://oss.mikeken.online/notes/数学/积分.html',
+        date: '2022-2-18',
+        content: '积分主要用于真实的光照计算',
+        tags: ['数学', '积分'],
+      },
+    ],
+  },
+]
