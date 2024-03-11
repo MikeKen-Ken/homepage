@@ -16,7 +16,7 @@ import {
 // import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem, NotesTitle, NotesAccordion } from '../components/grid-item'
+import { GridItem, NotesAccordion } from '../components/grid-item'
 // import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbBrainWash from '../public/images/games/brainwash.png'
 import thumbCrashLoad from '../public/images/games/crashload.png'
