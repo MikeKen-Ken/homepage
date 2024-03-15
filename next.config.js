@@ -4,6 +4,6 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  // assetPrefix: '/homepage',
+  assetPrefix: '/homepage',
 
 }
