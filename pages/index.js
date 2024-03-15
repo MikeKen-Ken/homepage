@@ -310,11 +310,11 @@ const Home = () => (
 )
 
 export default Home
-export { getServerSideProps } from '../components/chakra'
+// export { getServerSideProps } from '../components/chakra'
 const noteGroups = [
   {
     id: 1,
-    title: '图形学中的数学',
+    title: '图形学之数学',
     notes: [
       {
         id: 1,
@@ -365,7 +365,7 @@ const noteGroups = [
         href: 'http://oss.mikeken.online/notes/数学/曲线和曲面.html',
         content: '曲线和曲面是构建逼真、平滑的动画基础',
         date: '2022-03-11',
-        tags: ['数学', '曲线', '曲面'],
+        tags: ['数学', '曲线', '曲面', '贝塞尔'],
       },
       {
         id: 8,
@@ -385,9 +385,217 @@ const noteGroups = [
         id: 10,
         title: '积分',
         href: 'http://oss.mikeken.online/notes/数学/积分.html',
-        date: '2022-2-18',
+        date: '2022-1-11',
         content: '积分主要用于真实的光照计算',
         tags: ['数学', '积分'],
+      }, {
+        id: 11,
+        title: '求根',
+        href: 'http://oss.mikeken.online/notes/数学/求根.html',
+        content: '求根是一项重要的数学工具',
+        date: '2022-1-01',
+        tags: ['数学', '求根'],
+      },
+      {
+        id: 12,
+        title: '常见变换',
+        href: 'http://oss.mikeken.online/notes/数学/变换.html',
+        date: '2021-12-23',
+        tags: ['数学', '变换'],
+      }, {
+        id: 13,
+        title: '罗德里格斯旋转公式 (任意轴旋转)',
+        href: 'http://oss.mikeken.online/notes/数学/罗德里格斯旋转公式 (任意轴旋转).html',
+        date: '2021-12-23',
+        tags: ['数学', '旋转'],
+      }, {
+        id: 14,
+        title: '凸包算法',
+        href: 'http://oss.mikeken.online/notes/数学/凸包算法.html',
+        content: '找出一个点集合的最小凸多边形',
+        date: '2021-12-20',
+        tags: ['数学', '算法'],
+      },
+      {
+        id: 15,
+        title: '减少点算法',
+        href: 'http://oss.mikeken.online/notes/数学/减少点算法.html',
+        date: '2021-12-7',
+        tags: ['数学', '算法'],
+      },
+      {
+        id: 16,
+        title: 'Bresenham_s line',
+        href: 'http://oss.mikeken.online/notes/数学/Bresenham_s line.html',
+        content: 'Bresenham 算法是一种简单的线段绘制算法',
+        date: '2021-12-3',
+        tags: ['数学', '算法'],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: '图形学之基础',
+    notes: [
+      {
+        id: 1,
+        title: '图形学中的色彩',
+        href: 'http://oss.mikeken.online/notes/图形学基础/Color.html',
+        content: "如何表达图形颜色?",
+        date: '2021-12-01',
+        tags: ['图形学', '色彩'],
+      },
+      {
+        id: 2,
+        title: '信号处理',
+        href: 'http://oss.mikeken.online/notes/图形学基础/信号处理.html',
+        date: '2021-11-28',
+        tags: ['图形学', '信号处理'],
+      },
+      {
+        id: 3,
+        title: '图形学中的数据结构',
+        href: 'http://oss.mikeken.online/notes/图形学基础/图形学中的数据结构.html',
+        content: '总结了常见的图形学中的数据结构',
+        date: '2021-11-22',
+        tags: ['图形学', '数据结构'],
+      },
+      {
+        id: 4,
+        title: '纹理映射',
+        href: 'http://oss.mikeken.online/notes/图形学基础/纹理映射.html',
+        date: '2021-11-19',
+        tags: ['图形学', '纹理映射', '阴影'],
+      },
+      {
+        id: 5,
+        title: '采样',
+        href: 'http://oss.mikeken.online/notes/图形学基础/采样.html',
+        date: '2021-11-15',
+        content: '采样是图形学的基础',
+        tags: ['图形学', '采样',],
+      },
+      {
+        id: 6,
+        title: '混合',
+        href: 'http://oss.mikeken.online/notes/图形学基础/混合.html',
+        date: '2021-11-14',
+        content: '混合是将透明物体和别的物体颜色混合的一项技术',
+        tags: ['图形学', '混合',],
+      },
+      {
+        id: 7,
+        title: 'Gamma 矫正',
+        href: 'http://oss.mikeken.online/notes/图形学基础/Gamma 矫正.html',
+        date: '2021-11-12',
+        content: 'Gamma 矫正是正确显示色彩的一项技术',
+        tags: ['图形学', 'Gamma 矫正',],
+      },
+      {
+        id: 8,
+        title: 'FrameBuffer',
+        href: 'http://oss.mikeken.online/notes/图形学基础/FrameBuffer.html',
+        date: '2021-11-08',
+        tags: ['图形学', 'FrameBuffer',],
+      },
+      {
+        id: 9,
+        title: '可见性问题',
+        href: 'http://oss.mikeken.online/notes/图形学基础/可见性问题.html',
+        date: '2021-11-01',
+        tags: ['图形学', '可见性问题', '画家算法'],
+      },
+      {
+        id: 10,
+        title: '着色',
+        href: 'http://oss.mikeken.online/notes/图形学基础/着色.html',
+        content: '如何正确的计算物体表面颜色?',
+        date: '2021-11-01',
+        tags: ['图形学', '着色', '环境光', '漫反射', 'blinn-phong模型'],
+      },
+      {
+        id: 11,
+        title: 'OpenGL',
+        href: 'http://oss.mikeken.online/notes/图形学基础/OpenGL.html',
+        date: '2021-10-22',
+        tags: ['图形学', 'OpenGL', '图形管线'],
+      },
+      {
+        id: 12,
+        title: '变换',
+        href: 'http://oss.mikeken.online/notes/图形学基础/变换.html',
+        date: '2021-10-16',
+        tags: ['图形学', '变换', 'MVP变换', '视图变换', '投影变换'],
+      },
+      {
+        id: 12,
+        title: '模版测试',
+        href: 'http://oss.mikeken.online/notes/图形学基础/模版测试.html',
+        date: '2021-10-10',
+        content: '额外的缓冲区来操控像素',
+        tags: ['图形学', '模版测试'],
+      },
+
+    ],
+  }, {
+    id: 3,
+    title: '图形学之离线光线追踪',
+    notes: [
+      {
+        id: 1,
+        title: '光线追踪介绍',
+        href: 'http://oss.mikeken.online/notes/图形学基础/光线追踪介绍.html',
+        date: '2021-09-28',
+        tags: ['图形学', '光线追踪介绍'],
+      },
+      {
+        id: 2,
+        title: '反射折射与菲涅耳',
+        href: 'http://oss.mikeken.online/notes/图形学基础/反射折射与菲涅耳.html',
+        date: '2021-09-22',
+        tags: ['图形学', '离线光线追踪', '反射', '折射', '菲涅耳'],
+      },
+      {
+        id: 3,
+        title: '相机射线',
+        href: 'http://oss.mikeken.online/notes/图形学基础/相机射线.html',
+        date: '2021-09-11',
+        tags: ['图形学', '相机射线'],
+      },
+      {
+        id: 4,
+        title: 'Whitted-Style Ray Tracing',
+        href: 'http://oss.mikeken.online/notes/图形学基础/Whitted-Style Ray Tracing.html',
+        date: '2021-09-02',
+        tags: ['图形学', 'Whitted-Style Ray Tracing'],
+      },
+      {
+        id: 5,
+        title: '路径追踪',
+        href: 'http://oss.mikeken.online/notes/图形学基础/路径追踪.html',
+        date: '2021-08-27',
+        tags: ['图形学', '路径追踪',],
+      },
+
+
+    ],
+  }, {
+    id: 3,
+    title: '其他',
+    notes: [
+      {
+        id: 1,
+        title: '杂项',
+        href: 'http://oss.mikeken.online/notes/杂项.html',
+        date: '2022-03-28',
+        tags: ['数学', '三角', '各向异性',],
+      },
+      {
+        id: 2,
+        title: '物理相关',
+        href: 'http://oss.mikeken.online/notes/物理.html',
+        date: '2022-04-01',
+        tags: ['图形学', '力'],
       },
     ],
   },
