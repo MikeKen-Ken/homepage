@@ -26,6 +26,7 @@ import thumbQuadTree from '../public/images/games/quadtree.png'
 import thumb3dshader from '../public/images/games/3dshader.png'
 import thumb2dshader from '../public/images/games/2dshader.png'
 import thumbConvexHull from '../public/images/games/convexhull.png'
+import slicing from '../public/images/games/slicing.png'
 import thumbRamerDouglasPeucker from '../public/images/games/Ramer-Douglas-Peucker.png'
 import Image from 'next/image'
 
@@ -195,14 +196,18 @@ const Home = () => (
             title="脑洞太大了吧"
             thumbnail={thumbBrainWash}
           >
-            益智解谜类
+            <Box color="gray.500" fontSize="sm">
+              益智解谜类
+            </Box>
           </GridItem>
           <GridItem
             href="http://oss.mikeken.online/popstar/web-mobile/index.html"
             title="天天玩消星星"
             thumbnail={thumbStar}
           >
-            消除类
+            <Box color="gray.500" fontSize="sm">
+              消除类
+            </Box>
           </GridItem>
 
         </SimpleGrid>
@@ -226,14 +231,18 @@ const Home = () => (
             title="紧急迫降"
             thumbnail={thumbCrashLoad}
           >
-            飞行类
+            <Box color="gray.500" fontSize="sm">
+              飞行类
+            </Box>
           </GridItem>
           <GridItem
             href="http://oss.mikeken.online/dippuzzle/web-mobile/index.html"
             title="蘸色小能手"
             thumbnail={thumbDipPuzzle}
           >
-            休闲益智类
+            <Box color="gray.500" fontSize="sm">
+              休闲益智类
+            </Box>
           </GridItem>
         </SimpleGrid>
       </Section>
@@ -248,14 +257,18 @@ const Home = () => (
             title="2D shader(电脑打开)"
             thumbnail={thumb2dshader}
           >
-            常见的一些 2D shader
+            <Box color="gray.500" fontSize="sm">
+              常见的一些 2D shader
+            </Box>
           </GridItem>
           <GridItem
             href="http://oss.mikeken.online/blinn-phong/web-desktop/index.html"
             title="3D shader(电脑打开)"
             thumbnail={thumb3dshader}
           >
-            法线着色, blinn-phong模型, 纹理映射
+            <Box color="gray.500" fontSize="sm">
+              法线着色, blinn-phong模型, 纹理映射
+            </Box>
           </GridItem>
 
         </SimpleGrid>
@@ -271,21 +284,32 @@ const Home = () => (
             title="四叉树"
             thumbnail={thumbQuadTree}
           >
-            用于优化碰撞检测的一种数据结构
-          </GridItem>
+            <Box color="gray.500" fontSize="sm">
+              用于优化碰撞检测的一种数据结构
+            </Box> </GridItem>
           <GridItem
             href="http://oss.mikeken.online/convexHull/web-mobile/index.html"
             title="凸包"
             thumbnail={thumbConvexHull}
-          >
-            用于获取一堆点组成的的凸多边形
+          >            <Box color="gray.500" fontSize="sm">
+
+              用于获取一堆点组成的的凸多边形 </Box>
           </GridItem>
           <GridItem
             href="http://oss.mikeken.online/Ramer-Douglas-Peucker/web-mobile/index.html"
             title="Ramer-Douglas-Peucker"
             thumbnail={thumbRamerDouglasPeucker}
           >
-            在一定的阈值范围内简化曲线上的点的算法
+            <Box color="gray.500" fontSize="sm">
+              在一定的阈值范围内简化曲线上的点
+            </Box>
+          </GridItem>
+
+          <GridItem
+            href="http://oss.mikeken.online/threejs/slicing/index.html"
+            title="3D 套索工具"
+            thumbnail={slicing}
+          >
           </GridItem>
         </SimpleGrid>
       </Section>
