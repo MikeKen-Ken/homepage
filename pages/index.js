@@ -128,11 +128,11 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
+          <Link href="https://illust.odoruinu.net/" ">
             Drawing
           </Link>
           , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
+          <Link href="https://500px.com/p/mikeKen" ">
             Photography
           </Link>
           , Leica, Machine Learning
@@ -145,18 +145,18 @@ const Home = () => (
         </Heading>
         {/* <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/mikeKen" ">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @mikeKen
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/inkdrop_app" ">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -167,24 +167,24 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="https://twitter.com/mikeKen" ">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @craftzdog (日本語)
+                @mikeKen (日本語)
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/mikeKen" ">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoInstagram />}
               >
-                @craftzdog
+                @mikeKen
               </Button>
             </Link>
           </ListItem>
@@ -535,7 +535,7 @@ const noteGroups = [
         href: 'http://oss.mikeken.online/notes/图形学基础/着色.html',
         content: '如何正确的计算物体表面颜色?',
         date: '2021-11-01',
-        tags: ['图形学', '着色', '环境光', '漫反射', 'blinn-phong模型'],
+        tags: ['图形学', '着色', '环境光', '漫反射',],
       },
       {
         id: 11,
@@ -549,7 +549,7 @@ const noteGroups = [
         title: '变换',
         href: 'http://oss.mikeken.online/notes/图形学基础/变换.html',
         date: '2021-10-16',
-        tags: ['图形学', '变换', 'MVP变换', '视图变换', '投影变换'],
+        tags: ['图形学', '变换', 'MVP变换', '视图变换'],
       },
       {
         id: 12,
@@ -577,7 +577,7 @@ const noteGroups = [
         title: '反射折射与菲涅耳',
         href: 'http://oss.mikeken.online/notes/图形学基础/反射折射与菲涅耳.html',
         date: '2021-09-22',
-        tags: ['图形学', '离线光线追踪', '反射', '折射', '菲涅耳'],
+        tags: ['图形学', '离线光线追踪', '反射', '折射',],
       },
       {
         id: 3,
