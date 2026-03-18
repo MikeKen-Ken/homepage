@@ -1,6 +1,35 @@
 const Fonts = () => (
   <style jsx global>{`
-    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap');
+    @font-face {
+      font-family: 'LXGW WenKai';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('https://cdn.jsdelivr.net/gh/lxgw/LxgwWenKai@main/fonts/TTF/LXGWWenKai-Light.ttf')
+        format('truetype');
+    }
+
+    @font-face {
+      font-family: 'LXGW WenKai';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://cdn.jsdelivr.net/gh/lxgw/LxgwWenKai@main/fonts/TTF/LXGWWenKai-Regular.ttf')
+        format('truetype');
+    }
+
+    @font-face {
+      font-family: 'LXGW WenKai';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('https://cdn.jsdelivr.net/gh/lxgw/LxgwWenKai@main/fonts/TTF/LXGWWenKai-Bold.ttf')
+        format('truetype');
+    }
+
+    body {
+      font-family: 'LXGW WenKai', sans-serif;
+    }
   `}</style>
 )
 export default Fonts
