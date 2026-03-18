@@ -17,6 +17,7 @@ import {
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem, NotesAccordion } from '../components/grid-item'
+import { withBasePath } from '../lib/base-path'
 // import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbBrainWash from '../public/images/games/brainwash.png'
 import thumbCrashLoad from '../public/images/games/crashload.png'
@@ -72,7 +73,7 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src={withBasePath('/images/takuya.jpg')}
               alt="Profile image"
               borderRadius="full"
               width="100%"

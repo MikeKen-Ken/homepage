@@ -13,6 +13,7 @@ import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
+import { withBasePath } from '../../lib/base-path'
 
 const Work = () => (
   <Layout title="freeDBTagger">
@@ -21,7 +22,7 @@ const Work = () => (
         freeDBTagger <Badge>2004-2009</Badge>
       </Title>
       <Center my={6}>
-        <Image src="/images/works/freedbtagger_icon.gif" alt="icon" />
+        <Image src={withBasePath('/images/works/freedbtagger_icon.gif')} alt="icon" />
       </Center>
       <P>Automatic audio file tagging tool using FreeDB for Windows</P>
       <P>楽曲長の組み合わせでアルバムを特定して楽曲情報を自動入力</P>

@@ -14,6 +14,7 @@ import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
+import { withBasePath } from '../../lib/base-path'
 
 const Work = () => (
   <Layout title="amembo">
@@ -22,7 +23,7 @@ const Work = () => (
         amembo <Badge>2005-2008</Badge>
       </Title>
       <Center my={6}>
-        <Image src="/images/works/amembo_icon.png" alt="icon" />
+        <Image src={withBasePath('/images/works/amembo_icon.png')} alt="icon" />
       </Center>
       <P>
         P2P private file sharing tool with MSN Messenger integration for Windows

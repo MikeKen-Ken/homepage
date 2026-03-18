@@ -13,6 +13,7 @@ import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
+import { withBasePath } from '../../lib/base-path'
 
 const Work = () => (
   <Layout title="Menkiki (麺利き)">
@@ -75,7 +76,7 @@ const Work = () => (
         >
           <Image
             maxW={240}
-            src="/images/works/appstore.png"
+            src={withBasePath('/images/works/appstore.png')}
             className="image-appstore"
             alt="Download on App Store"
           />

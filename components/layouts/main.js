@@ -17,8 +17,6 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="CK's homepage" />
         <meta name="author" content="陈 肯" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <meta property="og:site_name" content="陈 肯" />
         <meta name="og:title" content="陈 肯" />
         <meta property="og:type" content="website" />
