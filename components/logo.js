@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import { withBasePath } from '../lib/base-path'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -23,9 +22,8 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = withBasePath(
-    `/images/footprint${useColorModeValue('', '-dark')}.svg`
-  )
+  const footPrintImg =
+    'https://cdn-icons-png.flaticon.com/128/6062/6062646.png'
 
   return (
     <Link href="/" scroll={false}>
