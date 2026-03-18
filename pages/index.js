@@ -54,7 +54,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             陈 肯
           </Heading>
-          <p>3D 前端工程师</p>
+          <p>游戏开发工程师</p>
         </Box>
         <Box
           flexShrink={0}
