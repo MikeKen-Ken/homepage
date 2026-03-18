@@ -54,29 +54,34 @@ const HomeThreeBg = () => {
     fillLight.position.set(-4, -2, 5)
     scene.add(fillLight)
 
-    const coreGeometry = new THREE.TorusKnotGeometry(1.35, 0.45, 220, 24)
-    const coreMaterial = new THREE.MeshStandardMaterial({
+    const coreGroup = new THREE.Group()
+    root.add(coreGroup)
+
+    const coreGeometry = new THREE.IcosahedronGeometry(1.45, 1)
+    const coreMaterial = new THREE.MeshPhysicalMaterial({
       color: coreColor,
-      metalness: 0.55,
-      roughness: 0.18,
-      emissive: 0x15324a,
-      emissiveIntensity: 0.6,
-      wireframe: true
+      metalness: 0.18,
+      roughness: 0.24,
+      clearcoat: 0.8,
+      clearcoatRoughness: 0.18,
+      emissive: 0x0b2233,
+      emissiveIntensity: 0.35
     })
     const core = new THREE.Mesh(coreGeometry, coreMaterial)
-    root.add(core)
+    coreGroup.add(core)
 
-    const shellGeometry = new THREE.IcosahedronGeometry(2.35, 1)
-    const shellMaterial = new THREE.MeshStandardMaterial({
+    const coreHaloGeometry = new THREE.SphereGeometry(2.15, 48, 48)
+    const coreHaloMaterial = new THREE.MeshPhysicalMaterial({
       color: shellColor,
       transparent: true,
-      opacity: 0.12,
-      metalness: 0.2,
-      roughness: 0.7,
-      wireframe: true
+      opacity: 0.08,
+      metalness: 0.05,
+      roughness: 0.95,
+      clearcoat: 0.15,
+      side: THREE.BackSide
     })
-    const shell = new THREE.Mesh(shellGeometry, shellMaterial)
-    root.add(shell)
+    const coreHalo = new THREE.Mesh(coreHaloGeometry, coreHaloMaterial)
+    coreGroup.add(coreHalo)
 
     const particleGeometry = new THREE.BufferGeometry()
     const particleCount = 180
@@ -102,19 +107,27 @@ const HomeThreeBg = () => {
 
     const orbits = new THREE.Group()
     scene.add(orbits)
-    const orbGeometry = new THREE.SphereGeometry(0.12, 16, 16)
-    const orbMaterial = new THREE.MeshStandardMaterial({
+    const orbGeometry = new THREE.SphereGeometry(0.12, 24, 24)
+    const orbMaterial = new THREE.MeshPhysicalMaterial({
       color: orbColor,
-      emissive: 0xff8c42,
-      emissiveIntensity: 0.8,
-      roughness: 0.4,
-      metalness: 0.2
+      emissive: 0x5f4b00,
+      emissiveIntensity: 0.18,
+      metalness: 0.08,
+      roughness: 0.28,
+      clearcoat: 1,
+      clearcoatRoughness: 0.08,
+      reflectivity: 0.55
     })
 
     const orbitItems = Array.from({ length: 6 }, (_, index) => {
       const orb = new THREE.Mesh(orbGeometry, orbMaterial)
       const angle = (index / 6) * Math.PI * 2
       const radius = 3.4
+      const orbHue = [0x7dd3fc, 0xa78bfa, 0xf9a8d4, 0xfbbf24, 0x86efac, 0x93c5fd][
+        index
+      ]
+      orb.material = orbMaterial.clone()
+      orb.material.color.setHex(orbHue)
       orb.position.set(
         Math.cos(angle) * radius,
         Math.sin(angle * 1.5) * 1.1,
@@ -131,9 +144,8 @@ const HomeThreeBg = () => {
 
       root.rotation.y = t * 0.25
       root.rotation.x = Math.sin(t * 0.35) * 0.14
-      core.rotation.x = t * 0.5
-      core.rotation.z = t * 0.2
-      shell.rotation.y = -t * 0.12
+      coreGroup.rotation.y = t * 0.18
+      coreGroup.rotation.x = Math.sin(t * 0.22) * 0.12
       particles.rotation.y = -t * 0.06
 
       orbitItems.forEach((item, index) => {
@@ -165,12 +177,13 @@ const HomeThreeBg = () => {
       window.cancelAnimationFrame(frameId)
       coreGeometry.dispose()
       coreMaterial.dispose()
-      shellGeometry.dispose()
-      shellMaterial.dispose()
+      coreHaloGeometry.dispose()
+      coreHaloMaterial.dispose()
       particleGeometry.dispose()
       particleMaterial.dispose()
       orbGeometry.dispose()
       orbMaterial.dispose()
+      orbitItems.forEach(item => item.mesh.material.dispose())
       renderer.dispose()
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement)
