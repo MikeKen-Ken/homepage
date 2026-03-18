@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
+import { withBasePath } from '../lib/base-path'
 import { DogSpinner, DogContainer } from './voxel-dog-loader'
 
 function easeOutCirc(x) {
@@ -74,13 +75,20 @@ const VoxelDog = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/house.glb', {
+      const modelPath = withBasePath('/house.glb')
+
+      loadGLTFModel(scene, modelPath, {
         receiveShadow: false,
         castShadow: false
-      }).then(() => {
-        animate()
-        setLoading(false)
       })
+        .then(() => {
+          animate()
+          setLoading(false)
+        })
+        .catch(error => {
+          console.error(`Failed to load model: ${modelPath}`, error)
+          setLoading(false)
+        })
 
       let req = null
       let frame = 0
