@@ -1,4 +1,5 @@
 // import NextLink from 'next/link'
+import { useEffect, useState } from 'react'
 import {
   // Link,
   Container,
@@ -8,10 +9,14 @@ import {
   // Button,
   // List,
   // ListItem,
+  IconButton,
+  Tooltip,
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { AnimatePresence, motion } from 'framer-motion'
 // import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -34,6 +39,68 @@ import Image from 'next/image'
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
+
+const ScrollHintButton = () => {
+  const [isAtTop, setIsAtTop] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < 240)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleClick = () => {
+    if (isAtTop) {
+      window.scrollBy({
+        top: Math.max(window.innerHeight * 0.85, 480),
+        behavior: 'smooth'
+      })
+      return
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={isAtTop ? 'down' : 'up'}
+        initial={{ opacity: 0, y: 16, scale: 0.92 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 16, scale: 0.92 }}
+        transition={{ duration: 0.2 }}
+        style={{
+          position: 'fixed',
+          right: '1.25rem',
+          bottom: '1.25rem',
+          zIndex: 20
+        }}
+      >
+        <Tooltip label={isAtTop ? '向下浏览' : '回到顶部'} placement="left">
+          <IconButton
+            aria-label={isAtTop ? '向下浏览' : '回到顶部'}
+            onClick={handleClick}
+            colorScheme="teal"
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            bg={useColorModeValue('whiteAlpha.900', 'gray.800')}
+            boxShadow="lg"
+            _hover={{ transform: 'translateY(-2px)' }}
+            _active={{ transform: 'translateY(0)' }}
+            icon={isAtTop ? <ChevronDownIcon boxSize={6} /> : <ChevronUpIcon boxSize={6} />}
+          />
+        </Tooltip>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
 
 const Home = () => (
   <Layout>
@@ -331,6 +398,7 @@ const Home = () => (
         </SimpleGrid>
       </Section>
     </Container>
+    <ScrollHintButton />
   </Layout >
 )
 
