@@ -33,6 +33,9 @@ jobs:
 
       - name: Build site
         run: yarn build
+        env:
+          # 项目页地址是 <user>.github.io/homepage，需要子路径前缀
+          NEXT_PUBLIC_BASE_PATH: /homepage
 
       - name: Export site
         run: yarn export

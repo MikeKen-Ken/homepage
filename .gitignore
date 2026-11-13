@@ -4,3 +4,7 @@ dist
 .vercel
 .env
 out
+
+# WorkBuddy local state (app publish marker + workspace memory)
+.wbapp_*.genie
+.workbuddy/
