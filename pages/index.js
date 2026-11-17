@@ -140,8 +140,8 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src={withBasePath('/images/takuya.jpg')}
-              alt="Profile image"
+              src={withBasePath('/images/avatar.png')}
+              alt="陈肯的卡通头像"
               borderRadius="full"
               width="100%"
               height="100%"
